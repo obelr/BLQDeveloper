@@ -32,15 +32,15 @@ const Navbar = () => {
               <path
                 d="m15.536 15.536 4 4"
                 stroke="#333"
-                strokewidth="1.75"
-                strokelinecap="round"
+                strokeWidth="1.75"
+                strokeLinecap="round"
               />
               <circle
                 cx="11"
                 cy="11"
                 r="6.125"
                 stroke="#333"
-                strokewidth="1.75"
+                strokeWidth="1.75"
               />
             </svg>
           </div>
