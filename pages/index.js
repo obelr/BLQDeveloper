@@ -5,13 +5,11 @@ import ImageSlider from "../app/Components/slider";
 
 export default function Home() {
   return (
-   <>
-  <Navbar />
+    <>
+      <Navbar />
       <ImageSlider />
-      <Shortcuts/>
-      <Discount/>
-   </>
-     
-   
+      <Shortcuts />
+      <Discount />
+    </>
   );
 }
