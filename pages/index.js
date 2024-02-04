@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className=" container">
        <Navbar />
-      <ImageSlider />
+      {/* <ImageSlider /> */}
       <Shortcuts/>
       <Discount/>
        </section>
