@@ -23,7 +23,7 @@ const ImageSlider = () => {
   }, []);
 
   return (
-     <div className="w-full h-screen flex justify-center items-center">
+     <div className="flex justify-center items-center">
      <CarouselSlider images={images}/>
     </div>
   );

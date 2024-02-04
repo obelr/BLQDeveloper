@@ -1,41 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, FreeMode } from "swiper/modules";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { useEffect, useState } from "react";
+
 const CarouselSlider = ({ images }) => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, FreeMode]}
-      slidesPerView={3}
-      spaceBetween={30}
-      pagination={{ clickable: true }}
-      navigation={true}
-      breakpoints={{
-        340: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 60,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 60,
-        },
-      }}
-      freeMode={true}
+    modules={[Navigation, Pagination]}
+    slidesPerView={3}
+    centeredSlides={true} // Center the active slide
+    spaceBetween={30}
+    pagination={{ clickable: true }}
+    navigation={true}
+    loop={true} // Enable infinite loop
+    autoplay={{ delay: 5000 }} // Optional: autoplay
+      
     >
       {images.map((imageUrl, index) => (
         <SwiperSlide key={index}>
-          <img src={imageUrl} alt={`Slide ${index + 1}`} />
+          <img src={imageUrl} alt={`Slide ${index + 1}`} className="w-full h-auto" />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -5,11 +5,13 @@ import ImageSlider from "../app/Components/slider";
 
 export default function Home() {
   return (
-    <section className=" container">
-       <Navbar />
-      {/* <ImageSlider /> */}
+   <>
+  <Navbar />
+      <ImageSlider />
       <Shortcuts/>
       <Discount/>
-       </section>
+   </>
+     
+   
   );
 }
